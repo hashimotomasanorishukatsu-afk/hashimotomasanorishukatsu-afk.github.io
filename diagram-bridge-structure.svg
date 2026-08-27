@@ -52,10 +52,10 @@
 <line x1="75.0" y1="785.4" x2="700.1" y2="791.6" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
 <line x1="522.2" y1="75.0" x2="677.5" y2="566.1" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
 <line x1="121.5" y1="555.3" x2="677.5" y2="566.1" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
-<circle cx="875.0" cy="619.4" r="11" fill="none" stroke="#a1441e" stroke-width="2.5" />
-<line x1="875.0" y1="619.4" x2="848.4" y2="810.0" stroke="#a1441e" stroke-width="1.2" stroke-dasharray="3 3" />
+<circle cx="807.4" cy="283.5" r="11" fill="none" stroke="#a1441e" stroke-width="2.5" />
+<line x1="807.4" y1="283.5" x2="848.4" y2="810.0" stroke="#a1441e" stroke-width="1.2" stroke-dasharray="3 3" />
 <rect x="774" y="802" width="330" height="58" fill="#faf1ec" stroke="#a1441e" stroke-opacity="0.4" rx="5" />
-<text x="788.4" y="824.0" font-family="sans-serif" font-size="15" font-weight="700" fill="#a1441e">接合部（複数の部材が集まる点）</text>
+<text x="788.4" y="824.0" font-family="sans-serif" font-size="15" font-weight="700" fill="#a1441e">接合部（5本の部材が集まる点）</text>
 <text x="788.4" y="844.0" font-family="sans-serif" font-size="13" fill="#a1441e">本研究で撮影が最も難しい場所</text>
 <text x="24" y="892.0" font-family="sans-serif" font-size="13" fill="#545b53">ドローンが橋の下から見上げたときの見え方に近い角度</text>
 <rect x="14" y="10" width="290" height="222" fill="#f7f4ec" stroke="#e2ddd0" rx="6" />
