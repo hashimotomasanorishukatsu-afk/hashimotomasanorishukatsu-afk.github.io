@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1148 916" role="img" aria-label="橋の下から見上げる視点で描いた橋梁トラス構造。53本の部材のうち道路床版を除く52本が種類ごとに色分けされている。">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1148 916" role="img" aria-label="橋の下から見上げる視点で描いた橋梁トラス構造。53本の部材のうち道路床版を除く52本が種類ごとに色分けされ、実際に2本以上の部材が接続している場所だけに灰色の点で接合部を示している。">
 <rect x="0" y="0" width="1148" height="916" fill="#ffffff" />
 <line x1="530.9" y1="473.0" x2="1073.4" y2="703.8" stroke="#2b4f68" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
 <line x1="522.2" y1="75.0" x2="989.2" y2="416.5" stroke="#4d7285" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
@@ -52,6 +52,28 @@
 <line x1="75.0" y1="785.4" x2="700.1" y2="791.6" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
 <line x1="522.2" y1="75.0" x2="677.5" y2="566.1" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
 <line x1="121.5" y1="555.3" x2="677.5" y2="566.1" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<circle cx="530.9" cy="473.0" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="1073.4" cy="703.8" r="6.7" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="522.2" cy="75.0" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="989.2" cy="416.5" r="6.7" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="875.0" cy="619.4" r="5.1" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="807.4" cy="283.5" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="75.0" cy="785.4" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="489.6" cy="841.0" r="6.7" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="121.5" cy="555.3" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="489.9" cy="656.2" r="6.7" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="310.4" cy="817.0" r="5.1" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="328.2" cy="611.9" r="7.5" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="331.0" cy="610.0" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="253.4" cy="397.2" r="5.1" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="131.8" cy="746.5" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="650.4" cy="698.0" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="498.8" cy="495.0" r="5.1" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="391.7" cy="788.5" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="856.5" cy="754.8" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="677.5" cy="566.1" r="6.7" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="582.0" cy="819.3" r="5.9" fill="#3a3f3c" fill-opacity="0.55" />
+<circle cx="700.1" cy="791.6" r="5.1" fill="#3a3f3c" fill-opacity="0.55" />
 <circle cx="807.4" cy="283.5" r="11" fill="none" stroke="#a1441e" stroke-width="2.5" />
 <line x1="807.4" y1="283.5" x2="848.4" y2="810.0" stroke="#a1441e" stroke-width="1.2" stroke-dasharray="3 3" />
 <rect x="774" y="802" width="330" height="58" fill="#faf1ec" stroke="#a1441e" stroke-opacity="0.4" rx="5" />
