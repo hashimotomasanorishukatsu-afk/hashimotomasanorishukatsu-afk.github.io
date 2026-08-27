@@ -10,7 +10,7 @@
 
 パドック動画の各フレームから、ゼッケン検出→数字抽出→ニューラルネットワークによる番号認識→競走馬データベース照会→情報表示、という5段階の処理を行うシステムを開発した。担当は画像処理・ニューラルネットワークによるゼッケン番号認識部分の実装。
 
-[![システムの入力→出力の比較。パドック映像のフレーム（左）から、ゼッケン番号を認識し馬の情報を重ねた映像（右）を生成する。](https://github.com/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/raw/main/racehorse-demo.jpg)](/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/blob/main/racehorse-demo.jpg)
+![システムの入力→出力の比較。パドック映像のフレーム（左）から、ゼッケン番号を認識し馬の情報を重ねた映像（右）を生成する。](racehorse-demo.jpg)
 
 ### ゼッケンの検出と数字の抽出
 
@@ -20,9 +20,9 @@
 
 手書き数字認識用データセットMNIST（60,000枚）に加えて、実際のパドック映像は背景・角度・明るさの条件が異なるため、パドック動画からゼッケン画像を収集し、回転・コントラスト調整・ノイズ付加・収縮（Erosion）によるData Augmentationで約2,000枚の訓練画像を作成し、これらを組み合わせて学習させた。
 
-[![ゼッケンの数字画像にData Augmentationを施して作成した学習データ（抜粋）](https://github.com/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/raw/main/racehorse-training-images.png)](/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/blob/main/racehorse-training-images.png)
+![ゼッケンの数字画像にData Augmentationを施して作成した学習データ（抜粋）](racehorse-training-images.png)
 
-[![学習に利用したMNISTデータセット（抜粋）](https://github.com/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/raw/main/racehorse-mnist.png)](/hashimotomasanorishukatsu-afk/hashimotomasanorishukatsu-afk.github.io/blob/main/racehorse-mnist.png)
+![学習に利用したMNISTデータセット（抜粋）](racehorse-mnist.png)
 
 ### 結果
 
