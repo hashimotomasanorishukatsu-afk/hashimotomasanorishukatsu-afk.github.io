@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1051 920" role="img" aria-label="橋梁トラス構造の等角投影図。53本の部材が、下弦材・上弦材・垂直材・斜材・横桁・縦桁リブ・道路床版・水平ブレースの8種類に色分けされ、道路床版はトラスの上に載る半透明の板として示されている。">
+<rect x="0" y="0" width="1051" height="920" fill="#ffffff" />
+<polygon points="581.0,824.0 941.2,616.0 470.1,344.0 109.9,552.0" fill="#6b716a" fill-opacity="0.18" stroke="#6b716a" stroke-opacity="0.5" stroke-width="1.5" />
+<line x1="594.8" y1="592.0" x2="955.1" y2="384.0" stroke="#2b4f68" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="800.0" x2="955.1" y2="592.0" stroke="#4d7285" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="592.0" x2="594.8" y2="800.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="775.0" y1="488.0" x2="775.0" y2="696.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="955.1" y1="384.0" x2="955.1" y2="592.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="592.0" x2="775.0" y2="696.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="775.0" y1="696.0" x2="955.1" y2="384.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="304.0" x2="456.3" y2="96.0" stroke="#2b4f68" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="512.0" x2="456.3" y2="304.0" stroke="#4d7285" stroke-width="5" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="304.0" x2="96.0" y2="512.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="276.1" y1="200.0" x2="276.1" y2="408.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="456.3" y1="96.0" x2="456.3" y2="304.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="304.0" x2="276.1" y2="408.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="276.1" y1="408.0" x2="456.3" y2="96.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="592.0" x2="96.0" y2="304.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="800.0" x2="96.0" y2="512.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="775.0" y1="488.0" x2="276.1" y2="200.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="775.0" y1="696.0" x2="276.1" y2="408.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="955.1" y1="384.0" x2="456.3" y2="96.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="955.1" y1="592.0" x2="456.3" y2="304.0" stroke="#3d6b48" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="800.0" x2="470.1" y2="520.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="470.1" y1="520.0" x2="345.4" y2="656.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="345.4" y1="656.0" x2="220.7" y2="376.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="220.7" y1="376.0" x2="96.0" y2="512.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="470.1" y1="520.0" x2="470.1" y2="728.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="220.7" y1="376.0" x2="220.7" y2="584.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="775.0" y1="696.0" x2="650.3" y2="416.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="650.3" y1="416.0" x2="525.5" y2="552.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="525.5" y1="552.0" x2="400.8" y2="272.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="400.8" y1="272.0" x2="276.1" y2="408.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="650.3" y1="416.0" x2="650.3" y2="624.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="400.8" y1="272.0" x2="400.8" y2="480.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="955.1" y1="592.0" x2="830.4" y2="312.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="830.4" y1="312.0" x2="705.7" y2="448.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="705.7" y1="448.0" x2="581.0" y2="168.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="581.0" y1="168.0" x2="456.3" y2="304.0" stroke="#c98a3e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="830.4" y1="312.0" x2="830.4" y2="520.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="581.0" y1="168.0" x2="581.0" y2="376.0" stroke="#a1441e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="581.0" y1="808.0" x2="941.2" y2="600.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="525.5" y1="776.0" x2="885.8" y2="568.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="470.1" y1="744.0" x2="830.4" y2="536.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="414.7" y1="712.0" x2="775.0" y2="504.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="359.3" y1="680.0" x2="719.5" y2="472.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="331.6" y1="664.0" x2="691.8" y2="456.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="276.1" y1="632.0" x2="636.4" y2="424.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="220.7" y1="600.0" x2="581.0" y2="392.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="165.3" y1="568.0" x2="525.5" y2="360.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="109.9" y1="536.0" x2="470.1" y2="328.0" stroke="#7a5ea8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="592.0" x2="705.7" y2="240.0" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="304.0" x2="705.7" y2="240.0" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="594.8" y1="800.0" x2="705.7" y2="448.0" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<line x1="96.0" y1="512.0" x2="705.7" y2="448.0" stroke="#c25b7e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.92" />
+<circle cx="775.0" cy="488.0" r="10" fill="none" stroke="#a1441e" stroke-width="2.5" />
+<line x1="767.0" y1="494.0" x2="160.0" y2="814.0" stroke="#a1441e" stroke-width="1.2" stroke-dasharray="3 3" />
+<rect x="26" y="806" width="330" height="58" fill="#faf1ec" stroke="#a1441e" stroke-opacity="0.4" rx="5" />
+<text x="40.0" y="828.0" font-family="sans-serif" font-size="15" font-weight="700" fill="#a1441e">接合部（複数の部材が集まる点）</text>
+<text x="40.0" y="848.0" font-family="sans-serif" font-size="13" fill="#a1441e">本研究で撮影が最も難しい場所</text>
+<text x="584.8" y="626.0" font-family="sans-serif" font-size="13" fill="#545b53">橋軸方向（全長26m・2パネル分）へ→</text>
+<rect x="735" y="10" width="290" height="248" fill="#f7f4ec" stroke="#e2ddd0" rx="6" />
+<text x="751" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#1e2420">部材の種類（53本）</text>
+<line x1="751" y1="58" x2="785" y2="58" stroke="#2b4f68" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="63" font-family="sans-serif" font-size="13" fill="#1e2420">下弦材</text>
+<line x1="751" y1="84" x2="785" y2="84" stroke="#4d7285" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="89" font-family="sans-serif" font-size="13" fill="#1e2420">上弦材</text>
+<line x1="751" y1="110" x2="785" y2="110" stroke="#a1441e" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="115" font-family="sans-serif" font-size="13" fill="#1e2420">垂直材</text>
+<line x1="751" y1="136" x2="785" y2="136" stroke="#c98a3e" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="141" font-family="sans-serif" font-size="13" fill="#1e2420">斜材</text>
+<line x1="751" y1="162" x2="785" y2="162" stroke="#3d6b48" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="167" font-family="sans-serif" font-size="13" fill="#1e2420">横桁</text>
+<line x1="751" y1="188" x2="785" y2="188" stroke="#7a5ea8" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="193" font-family="sans-serif" font-size="13" fill="#1e2420">縦桁リブ</text>
+<line x1="751" y1="214" x2="785" y2="214" stroke="#6b716a" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="219" font-family="sans-serif" font-size="13" fill="#1e2420">道路床版</text>
+<line x1="751" y1="240" x2="785" y2="240" stroke="#c25b7e" stroke-width="5" stroke-linecap="round" />
+<text x="795" y="245" font-family="sans-serif" font-size="13" fill="#1e2420">水平ブレース</text>
+</svg>
