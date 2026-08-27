@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Masanori Hashimoto — Portfolio</title>
-<meta name="description" content="橋梁トラスUAV点検CPP研究における方針転換とAI活用の記録。AIエンジニア長期インターン向けポートフォリオ。">
+<meta name="description" content="名古屋工業大学 打矢研究室 M2。橋梁トラスUAV点検の経路計画（CPP）研究を軸にしたAIエンジニア長期インターン向けポートフォリオ。">
 <meta property="og:title" content="Masanori Hashimoto — Portfolio">
-<meta property="og:description" content="橋梁トラスUAV点検CPP研究における方針転換とAI活用の記録。">
+<meta property="og:description" content="名古屋工業大学 打矢研究室 M2。橋梁トラスUAV点検の経路計画（CPP）研究を軸にしたポートフォリオ。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -89,7 +89,7 @@
     color: var(--ink);
     font-family: "Noto Serif JP", "Hiragino Mincho ProN", "YuMincho", Georgia, serif;
     font-size: 16.5px;
-    line-height: 1.92;
+    line-height: 1.9;
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--steel); }
@@ -97,61 +97,73 @@
   .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, Menlo, monospace; font-variant-numeric: tabular-nums; }
   .sans { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", -apple-system, sans-serif; }
 
-  .page { max-width: 740px; margin: 0 auto; padding: 60px 24px 96px; }
+  .page { max-width: 720px; margin: 0 auto; padding: 56px 24px 90px; }
 
-  /* ── masthead ───────────────────────────────── */
-  .masthead { padding-bottom: 36px; border-bottom: 1px solid var(--line-strong); margin-bottom: 52px; }
+  /* ── masthead / self-intro ─────────────────────── */
+  .masthead { padding-bottom: 32px; border-bottom: 1px solid var(--line-strong); margin-bottom: 48px; }
   .eyebrow {
     font-family: ui-monospace, "SF Mono", Consolas, monospace;
     font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--steel-soft); margin-bottom: 20px;
+    color: var(--steel-soft); margin-bottom: 18px;
   }
   h1 {
     font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
-    font-weight: 700; font-size: clamp(30px, 5.4vw, 42px);
-    line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 6px;
+    font-weight: 700; font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 8px;
     text-wrap: balance; color: var(--ink);
   }
-  .role-target {
+  .headline {
     font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
-    font-size: 14.5px; font-weight: 500; color: var(--ink-soft);
-    margin: 0 0 22px;
+    font-size: 16px; font-weight: 600; color: var(--steel);
+    margin: 0 0 6px;
   }
-  .thesis {
-    font-size: 17.5px; color: var(--ink); max-width: 60ch; margin: 0;
-    padding-left: 16px; border-left: 2px solid var(--steel-soft);
+  .affiliation {
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    font-size: 13.5px; font-weight: 500; color: var(--ink-soft);
+    margin: 0 0 20px;
   }
-  .thesis b, p b { color: var(--steel); font-weight: 600; }
+  .bio { font-size: 15.5px; color: var(--ink); max-width: 60ch; margin: 0; }
+  .bio b { color: var(--steel); font-weight: 600; }
 
-  /* ── numbered sections ─────────────────────────── */
-  .arg { display: flex; flex-direction: column; gap: 60px; }
-  .step { display: grid; grid-template-columns: 52px 1fr; gap: 18px; }
-  @media (max-width: 560px) { .step { grid-template-columns: 34px 1fr; } }
-
-  .step-num {
-    font-family: ui-monospace, "SF Mono", Consolas, monospace;
-    font-size: 13px; color: var(--steel-soft); padding-top: 5px;
-    position: relative;
+  .fill {
+    color: var(--ink-faint); border-bottom: 1px dashed var(--ink-faint);
+    padding: 0 1px; font-style: normal;
   }
-  .step-num::after {
-    content: "";
-    position: absolute; left: 6px; top: 28px; bottom: -60px; width: 1px;
-    background: var(--line);
-  }
-  .step:last-child .step-num::after { display: none; }
 
-  .step h2 {
+  /* ── sections ───────────────────────────────── */
+  .sections { display: flex; flex-direction: column; gap: 56px; }
+  section > h2 {
     font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
-    font-weight: 700; font-size: 21px; margin: 0 0 14px; color: var(--ink);
+    font-weight: 700; font-size: 22px; margin: 0 0 6px; color: var(--ink);
     text-wrap: balance;
   }
-  .step p { margin: 0 0 14px; color: var(--ink); }
-  .step p:last-child { margin-bottom: 0; }
-  .step .lede { color: var(--ink-soft); }
+  section > .section-sub {
+    font-size: 13.5px; color: var(--ink-soft); margin: 0 0 22px;
+  }
+
+  /* ── project card ───────────────────────────── */
+  .project-meta {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 24px;
+  }
+  .project-meta span {
+    font-family: "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 600;
+    color: var(--steel); background: var(--steel-bg);
+    border-radius: 20px; padding: 4px 12px;
+  }
+
+  .field { margin-bottom: 26px; }
+  .field:last-child { margin-bottom: 0; }
+  .field h3 {
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    font-weight: 600; font-size: 14px; color: var(--steel-soft);
+    letter-spacing: 0.02em; margin: 0 0 10px;
+  }
+  .field p { margin: 0 0 12px; color: var(--ink); }
+  .field p:last-child { margin-bottom: 0; }
 
   /* ── fact cards ─────────────────────────────── */
   .facts {
-    list-style: none; margin: 18px 0; padding: 0;
+    list-style: none; margin: 0; padding: 0;
     display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
   }
   @media (max-width: 560px) { .facts { grid-template-columns: 1fr; } }
@@ -163,7 +175,7 @@
     box-shadow: var(--shadow);
   }
   .facts .num {
-    display: block; font-size: 22px; font-weight: 600; color: var(--steel);
+    display: block; font-size: 21px; font-weight: 600; color: var(--steel);
     margin-bottom: 6px; letter-spacing: -0.01em;
   }
   .facts .label {
@@ -174,25 +186,25 @@
 
   /* ── AI-use pattern grid ────────────────────── */
   .patterns {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 16px;
   }
   @media (max-width: 560px) { .patterns { grid-template-columns: 1fr; } }
   .patterns > div {
     border: 1px solid var(--line); border-radius: 4px;
-    padding: 15px 16px; background: var(--paper-raised); box-shadow: var(--shadow);
+    padding: 14px 15px; background: var(--paper-raised); box-shadow: var(--shadow);
   }
   .patterns .k {
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 13.5px; font-weight: 600;
-    color: var(--steel); margin-bottom: 8px; display: block;
+    font-size: 13px; font-weight: 600;
+    color: var(--steel); margin-bottom: 6px; display: block;
   }
-  .patterns p { font-size: 13.5px; margin: 0; color: var(--ink-soft); line-height: 1.75; }
+  .patterns p { font-size: 13px; margin: 0; color: var(--ink-soft); line-height: 1.7; }
 
   .callout {
-    margin: 20px 0 0; padding: 18px 20px;
+    margin: 0; padding: 16px 18px;
     background: var(--settled-bg); border: 1px solid var(--line);
     border-left: 3px solid var(--settled);
-    border-radius: 4px; font-size: 14.5px; color: var(--ink);
+    border-radius: 4px; font-size: 14px; color: var(--ink);
   }
   .callout .tag {
     font-family: "Noto Sans JP", sans-serif; font-size: 11.5px; font-weight: 600;
@@ -201,28 +213,32 @@
   }
 
   /* ── tech stack ─────────────────────────────── */
-  .stack { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 0; }
+  .stack { display: flex; flex-wrap: wrap; gap: 9px; }
   .stack span {
     font-family: ui-monospace, "SF Mono", Consolas, monospace;
     font-size: 13px; color: var(--ink);
     background: var(--paper-raised); border: 1px solid var(--line);
     border-radius: 20px; padding: 6px 14px;
   }
+  .skill-group { margin-bottom: 16px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group .g-label {
+    font-family: "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 600;
+    color: var(--ink-soft); margin-bottom: 8px; display: block;
+  }
 
   /* ── footer ─────────────────────────────────── */
   footer {
-    margin-top: 76px; padding-top: 28px; border-top: 1px solid var(--line-strong);
+    margin-top: 68px; padding-top: 26px; border-top: 1px solid var(--line-strong);
   }
-  footer p { font-size: 13.5px; color: var(--ink-soft); line-height: 2; margin: 0; }
-  footer a { color: var(--steel-soft); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
-  footer a:hover { color: var(--steel); }
+  footer .row { font-size: 13.5px; color: var(--ink-soft); line-height: 2; margin: 0 0 4px; }
+  footer .row .k { color: var(--ink); font-weight: 600; font-family: "Noto Sans JP", sans-serif; }
 
   @media (prefers-reduced-motion: no-preference) {
-    .step { animation: rise 0.5s ease-out both; }
-    .step:nth-child(1) { animation-delay: 0.02s; }
-    .step:nth-child(2) { animation-delay: 0.06s; }
-    .step:nth-child(3) { animation-delay: 0.10s; }
-    .step:nth-child(4) { animation-delay: 0.14s; }
+    section { animation: rise 0.5s ease-out both; }
+    section:nth-of-type(1) { animation-delay: 0.02s; }
+    section:nth-of-type(2) { animation-delay: 0.07s; }
+    section:nth-of-type(3) { animation-delay: 0.12s; }
     @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
   }
 </style>
@@ -231,47 +247,73 @@
 <div class="page">
 
   <div class="masthead">
-    <div class="eyebrow">Portfolio · AIエンジニア長期インターン応募資料 · 2026年8月</div>
+    <div class="eyebrow">Portfolio · 2026年8月</div>
     <h1>Masanori Hashimoto</h1>
-    <p class="role-target">橋梁トラスUAV点検 経路計画（Coverage Path Planning）研究 — 名工大 打矢研 M2</p>
-    <p class="thesis">
-      「TSPは計算が爆発するから訪問順序を工夫する」という研究全体の出発点を、自分で測って検証し直した。
-      結果、<b>移動効率ではなく撮影品質の保証</b>が本当の課題だと分かり、経路計画のアーキテクチャそのものを作り直した。
-      AIエージェントは判断を代行させる相手ではなく、<b>自分では見えない死角を突く道具</b>として使う。
+    <p class="headline">C++ / ROS2でロボティクスの経路計画アルゴリズムを実装するAIエンジニア志望</p>
+    <p class="affiliation">名古屋工業大学大学院 打矢研究室 修士2年</p>
+    <p class="bio">
+      橋梁点検用ドローンの経路計画アルゴリズムを、着想から実装・検証まで一人で担当している。
+      研究の前提を自分で測って検証し直し、必要なら設計そのものを作り直すところまでやる。
+      <span class="fill">志望動機をここに1〜2文で追記</span>
     </p>
   </div>
 
-  <div class="arg">
+  <div class="sections">
 
-    <div class="step">
-      <div class="step-num mono">01</div>
-      <div class="step-body">
-        <h2>前提を検証し、研究の軸を転換した</h2>
-        <p class="lede">
-          国内橋梁は建設後50年超が2033年に全体の約63%へ達する見込みで、道路法は5年に1度の近接目視点検を義務付けている。
-          点検員不足と高所・水上作業の危険性を背景に、UAVによる自動点検の経路計画（CPP）を研究している。
-          対象は明石大橋のトラス橋梁——部材が密に交差し合う、幾何的に最も難しい構造の一つ。
-        </p>
+    <section>
+      <h2>プロジェクト実績</h2>
+      <p class="section-sub">橋梁トラスUAV点検 経路計画（Coverage Path Planning）研究 · 2026年〜継続中</p>
+      <div class="project-meta">
+        <span>個人研究・単独実装</span>
+        <span>C++ / ROS2 / Gazebo</span>
+        <span>アルゴリズム設計〜シミュレーション検証</span>
+      </div>
+
+      <div class="field">
+        <h3>課題</h3>
         <p>
-          研究の出発点は「ビューポイント生成＋TSP巡回はNP困難で計算が爆発するから、訪問順序を工夫する」という前提だった。
-          だが実際に必要な視点数を測定すると I=68〜190（数十ではなく百程度）で、TSPソルバのベンチマークではこの規模は
-          1秒未満で解ける可能性が高いと判明した。<b>研究全体を駆動していた前提そのものが揺らいでいる</b>ことに、自分で気づいた。
-        </p>
-        <p>
-          そこから点検制度（道路橋定期点検要領・自治体の運用基準）まで遡ると、UAV点検の成否を分けているのは
-          移動の効率ではなく撮影画像の品質だと分かった。分解能保証と静止撮影によるモーションブラー回避を軸に据え直し、
-          連続移動しながら撮影する既存アーキテクチャから、静止して撮る視点生成方式へ、経路計画そのものを設計し直した。
+          国内の橋梁は建設後50年を超えるものが急増しており、2033年には全体の約63%に達すると推計されている。
+          道路法は5年に1度、目視での近接点検を義務付けているが、点検員は不足し、高所・水上での近接目視作業には
+          危険が伴う。ドローンによる自動点検の解決策として、構造物の表面を漏れなく撮影する飛行経路を自動で
+          組み立てる技術——<b>Coverage Path Planning（CPP、被覆経路計画）</b>——が要る。対象の明石大橋のような
+          トラス橋は、細い部材が何本も様々な角度で交差する構造を持ち、CPPの中でも特に難しい部類に入る。
+          部材同士が密に接近するため安全に飛べる空間は狭く、部材の裏側や接合部の内側は特定の方向からしか
+          撮影できない。
         </p>
       </div>
-    </div>
 
-    <div class="step">
-      <div class="step-num mono">02</div>
-      <div class="step-body">
-        <h2>実装して、数字で検証した</h2>
-        <p class="lede">
-          提案手法をC++で実装し、ROS2 + Gazebo上で実際に自律飛行・被覆評価まで動かして検証している。理論だけで止めない。
+      <div class="field">
+        <h3>自分の役割</h3>
+        <p>
+          アルゴリズムの設計からC++実装、ROS2 + Gazeboでのシミュレーション構築、結果の検証・分析まで一人で担当。
+          指導教員の方針を実行するだけでなく、研究全体の前提そのものを自分で検証し、方針転換を主導した。
         </p>
+      </div>
+
+      <div class="field">
+        <h3>前提を自分で測って検証し、設計を作り直した</h3>
+        <p>
+          3D構造物点検のCPP研究の主流は、①構造物の表面を撮影できる位置（<b>ビューポイント</b>）をいくつか生成し、
+          ②その全点を回る最短順序を求める（<b>巡回セールスマン問題・TSP</b>。点の数が増えると計算時間が急激に
+          増えることで知られる）、という2段階の設計を取る。本研究も当初、「ビューポイントが多いとTSPが計算爆発
+          するから、訪問順序の工夫で経路を短くする」という前提から出発していた。
+        </p>
+        <p>
+          だが実際に必要なビューポイント数を測定すると I=68〜190（専門家の想定は数十、自分の直感は数百だったが、
+          実際は百程度）で、既存のTSPソルバのベンチマークではこの規模は1秒未満で解ける可能性が高いと分かった。
+          研究全体を駆動していた前提そのものが揺らいでいることに、自分で気づいた。
+        </p>
+        <p>
+          振り出しに戻り点検制度（国の点検要領・自治体の運用基準）まで遡ると、UAV点検の成否を分けているのは
+          移動の効率ではなく撮影画像の品質だと分かった。<b>分解能保証</b>（写真が診断に使える解像度で撮れているかを
+          撮影距離・角度から計算して保証すること）と、静止して撮ることによる<b>モーションブラー</b>（動きながら
+          撮ると生じるブレ）の回避を研究の軸に据え直し、連続移動しながら撮影する既存アーキテクチャから、
+          止まって撮る視点生成方式へ、経路計画そのものを設計し直した。
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>成果</h3>
         <ul class="facts">
           <li>
             <span class="num mono">97.68%</span>
@@ -291,20 +333,20 @@
           <li>
             <span class="num mono">G(d,θ)≤s_req</span>
             <span class="label">分解能保証式（実装済み）</span>
-            <span class="detail">既往研究のT型橋脚実験値（f=97.9mm）を用い、距離・入射角から実効GSDを計算する式をROS2ノードに実装・動作確認。</span>
+            <span class="detail">既往研究のT型橋脚実験値（f=97.9mm）を用い、距離・入射角から実効GSD（1pixelが対象物上で対応する実寸）を計算する式をROS2ノードに実装・動作確認。</span>
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="step">
-      <div class="step-num mono">03</div>
-      <div class="step-body">
-        <h2>AIエージェントを「使い分ける」</h2>
-        <p class="lede">
-          研究の方針決定でサブエージェントを使うとき、効く使い方と効かない使い方がはっきり分かれると気づいた。
-          判断基準は一つ——外部から情報が入るか、自分では見えない死角を突くか。同じモデルに討論させるだけでは、
-          もっともらしく見えても判断材料は増えない。
+    <section>
+      <h2>AIツールとの向き合い方</h2>
+      <p class="section-sub">研究の方針決定でAIエージェントを使うときの判断軸</p>
+      <div class="field">
+        <p>
+          サブエージェントを使うとき、効く使い方と効かない使い方がはっきり分かれると気づいた。判断基準は一つ——
+          外部から情報が入るか、自分では見えない死角を突くか。同じモデルに討論させるだけでは、もっともらしく
+          見えても判断材料は増えない。効くと分かった使い方は4つ。
         </p>
         <div class="patterns">
           <div>
@@ -329,40 +371,47 @@
           「品質保証は視点数を増やせば力ずくで達成できる」という行き詰まりに直面したとき、エージェントに議論させる前に
           自分の実装を測った。視点85→227で被覆率は90.1%→98.2%に上がるのに、1枚あたりの達成分解能は0.456→0.458と
           ほぼ不変——増分は全て被覆率に使われ、品質保証には効いていなかった。さらに掘ると、被覆判定が機体の実座標ではなく
-          計画上の視点座標で行われており、到達判定は0.4mのずれを許容していることが判明。
-          「品質保証」は理想的な位置決めを仮定した上のものだったと分かった。
+          計画上の視点座標で行われており、到達判定は0.4mのずれを許容していることが判明した。
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="step">
-      <div class="step-num mono">04</div>
-      <div class="step-body">
-        <h2>技術スタック</h2>
-        <p class="lede">アルゴリズム設計から実機を想定したシミュレーション実装まで、一人で通している。</p>
+    <section>
+      <h2>スキル</h2>
+      <div class="skill-group">
+        <span class="g-label">言語 / フレームワーク</span>
         <div class="stack">
           <span>C++17</span>
+          <span>Python</span>
           <span>ROS2 (rclcpp)</span>
-          <span>Gazebo</span>
+          <span>CMake</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="g-label">アルゴリズム</span>
+        <div class="stack">
           <span>OBB衝突判定</span>
           <span>レイキャスティング遮蔽判定</span>
           <span>Greedy Set-Cover</span>
           <span>SA-TSP</span>
           <span>Voronoiクラスタリング</span>
-          <span>Python（集計・可視化）</span>
-          <span>Git / CMake</span>
         </div>
       </div>
-    </div>
+      <div class="skill-group">
+        <span class="g-label">環境 / ツール</span>
+        <div class="stack">
+          <span>Gazebo</span>
+          <span>Git</span>
+          <span>Linux (WSL2)</span>
+        </div>
+      </div>
+    </section>
 
   </div>
 
   <footer>
-    <p>
-      詳細な実装記録・実験ログ：<a href="#">GitHubリポジトリURLを追記</a><br>
-      連絡先：<a href="#">メールアドレスを追記</a><br>
-      関連資料：研究ストーリー / AI活用の型 / ROS2実装ノート（別途追加予定）
-    </p>
+    <p class="row"><span class="k">GitHub</span>　<span class="fill">プロフィールURLを追記</span></p>
+    <p class="row"><span class="k">連絡先</span>　<span class="fill">メールアドレスを追記</span></p>
   </footer>
 
 </div>
