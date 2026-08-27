@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masanori Hashimoto — Portfolio</title>
+<meta name="description" content="橋梁トラスUAV点検CPP研究における方針転換とAI活用の記録。AIエンジニア長期インターン向けポートフォリオ。">
+<meta property="og:title" content="Masanori Hashimoto — Portfolio">
+<meta property="og:description" content="橋梁トラスUAV点検CPP研究における方針転換とAI活用の記録。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap">
+<style>
+  :root {
+    --paper: #ece9e0;
+    --paper-raised: #f7f4ec;
+    --paper-sunken: #e2ddd0;
+    --ink: #1e2420;
+    --ink-soft: #545b53;
+    --ink-faint: #8a8f87;
+    --steel: #2b4f68;
+    --steel-soft: #4d7285;
+    --steel-bg: rgba(43, 79, 104, 0.08);
+    --settled: #3d6b48;
+    --settled-bg: rgba(61, 107, 72, 0.09);
+    --line: rgba(30, 36, 32, 0.14);
+    --line-strong: rgba(30, 36, 32, 0.26);
+    --shadow: 0 1px 2px rgba(30, 36, 32, 0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14181a;
+      --paper-raised: #1c2224;
+      --paper-sunken: #0f1213;
+      --ink: #e7e4da;
+      --ink-soft: #a7ada3;
+      --ink-faint: #6f766e;
+      --steel: #8fb6cc;
+      --steel-soft: #6d97a8;
+      --steel-bg: rgba(143, 182, 204, 0.1);
+      --settled: #7cbb8a;
+      --settled-bg: rgba(124, 187, 138, 0.12);
+      --line: rgba(231, 228, 218, 0.14);
+      --line-strong: rgba(231, 228, 218, 0.28);
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14181a;
+    --paper-raised: #1c2224;
+    --paper-sunken: #0f1213;
+    --ink: #e7e4da;
+    --ink-soft: #a7ada3;
+    --ink-faint: #6f766e;
+    --steel: #8fb6cc;
+    --steel-soft: #6d97a8;
+    --steel-bg: rgba(143, 182, 204, 0.1);
+    --settled: #7cbb8a;
+    --settled-bg: rgba(124, 187, 138, 0.12);
+    --line: rgba(231, 228, 218, 0.14);
+    --line-strong: rgba(231, 228, 218, 0.28);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  :root[data-theme="light"] {
+    --paper: #ece9e0;
+    --paper-raised: #f7f4ec;
+    --paper-sunken: #e2ddd0;
+    --ink: #1e2420;
+    --ink-soft: #545b53;
+    --ink-faint: #8a8f87;
+    --steel: #2b4f68;
+    --steel-soft: #4d7285;
+    --steel-bg: rgba(43, 79, 104, 0.08);
+    --settled: #3d6b48;
+    --settled-bg: rgba(61, 107, 72, 0.09);
+    --line: rgba(30, 36, 32, 0.14);
+    --line-strong: rgba(30, 36, 32, 0.26);
+    --shadow: 0 1px 2px rgba(30, 36, 32, 0.07);
+  }
+
+  * { box-sizing: border-box; }
+  ::selection { background: var(--steel-bg); color: var(--ink); }
+
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Serif JP", "Hiragino Mincho ProN", "YuMincho", Georgia, serif;
+    font-size: 16.5px;
+    line-height: 1.92;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--steel); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--steel); outline-offset: 2px; }
+  .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, Menlo, monospace; font-variant-numeric: tabular-nums; }
+  .sans { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", -apple-system, sans-serif; }
+
+  .page { max-width: 740px; margin: 0 auto; padding: 60px 24px 96px; }
+
+  /* ── masthead ───────────────────────────────── */
+  .masthead { padding-bottom: 36px; border-bottom: 1px solid var(--line-strong); margin-bottom: 52px; }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--steel-soft); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+    font-weight: 700; font-size: clamp(30px, 5.4vw, 42px);
+    line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 6px;
+    text-wrap: balance; color: var(--ink);
+  }
+  .role-target {
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    font-size: 14.5px; font-weight: 500; color: var(--ink-soft);
+    margin: 0 0 22px;
+  }
+  .thesis {
+    font-size: 17.5px; color: var(--ink); max-width: 60ch; margin: 0;
+    padding-left: 16px; border-left: 2px solid var(--steel-soft);
+  }
+  .thesis b, p b { color: var(--steel); font-weight: 600; }
+
+  /* ── numbered sections ─────────────────────────── */
+  .arg { display: flex; flex-direction: column; gap: 60px; }
+  .step { display: grid; grid-template-columns: 52px 1fr; gap: 18px; }
+  @media (max-width: 560px) { .step { grid-template-columns: 34px 1fr; } }
+
+  .step-num {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 13px; color: var(--steel-soft); padding-top: 5px;
+    position: relative;
+  }
+  .step-num::after {
+    content: "";
+    position: absolute; left: 6px; top: 28px; bottom: -60px; width: 1px;
+    background: var(--line);
+  }
+  .step:last-child .step-num::after { display: none; }
+
+  .step h2 {
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+    font-weight: 700; font-size: 21px; margin: 0 0 14px; color: var(--ink);
+    text-wrap: balance;
+  }
+  .step p { margin: 0 0 14px; color: var(--ink); }
+  .step p:last-child { margin-bottom: 0; }
+  .step .lede { color: var(--ink-soft); }
+
+  /* ── fact cards ─────────────────────────────── */
+  .facts {
+    list-style: none; margin: 18px 0; padding: 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  @media (max-width: 560px) { .facts { grid-template-columns: 1fr; } }
+  .facts li {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 15px 16px;
+    box-shadow: var(--shadow);
+  }
+  .facts .num {
+    display: block; font-size: 22px; font-weight: 600; color: var(--steel);
+    margin-bottom: 6px; letter-spacing: -0.01em;
+  }
+  .facts .label {
+    font-family: "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 600;
+    color: var(--ink); margin-bottom: 6px;
+  }
+  .facts .detail { font-size: 13.5px; color: var(--ink-soft); line-height: 1.7; }
+
+  /* ── AI-use pattern grid ────────────────────── */
+  .patterns {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0;
+  }
+  @media (max-width: 560px) { .patterns { grid-template-columns: 1fr; } }
+  .patterns > div {
+    border: 1px solid var(--line); border-radius: 4px;
+    padding: 15px 16px; background: var(--paper-raised); box-shadow: var(--shadow);
+  }
+  .patterns .k {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 13.5px; font-weight: 600;
+    color: var(--steel); margin-bottom: 8px; display: block;
+  }
+  .patterns p { font-size: 13.5px; margin: 0; color: var(--ink-soft); line-height: 1.75; }
+
+  .callout {
+    margin: 20px 0 0; padding: 18px 20px;
+    background: var(--settled-bg); border: 1px solid var(--line);
+    border-left: 3px solid var(--settled);
+    border-radius: 4px; font-size: 14.5px; color: var(--ink);
+  }
+  .callout .tag {
+    font-family: "Noto Sans JP", sans-serif; font-size: 11.5px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--settled);
+    margin-bottom: 8px; display: block;
+  }
+
+  /* ── tech stack ─────────────────────────────── */
+  .stack { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 0; }
+  .stack span {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 13px; color: var(--ink);
+    background: var(--paper-raised); border: 1px solid var(--line);
+    border-radius: 20px; padding: 6px 14px;
+  }
+
+  /* ── footer ─────────────────────────────────── */
+  footer {
+    margin-top: 76px; padding-top: 28px; border-top: 1px solid var(--line-strong);
+  }
+  footer p { font-size: 13.5px; color: var(--ink-soft); line-height: 2; margin: 0; }
+  footer a { color: var(--steel-soft); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+  footer a:hover { color: var(--steel); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .step { animation: rise 0.5s ease-out both; }
+    .step:nth-child(1) { animation-delay: 0.02s; }
+    .step:nth-child(2) { animation-delay: 0.06s; }
+    .step:nth-child(3) { animation-delay: 0.10s; }
+    .step:nth-child(4) { animation-delay: 0.14s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="eyebrow">Portfolio · AIエンジニア長期インターン応募資料 · 2026年8月</div>
+    <h1>Masanori Hashimoto</h1>
+    <p class="role-target">橋梁トラスUAV点検 経路計画（Coverage Path Planning）研究 — 名工大 打矢研 M2</p>
+    <p class="thesis">
+      「TSPは計算が爆発するから訪問順序を工夫する」という研究全体の出発点を、自分で測って検証し直した。
+      結果、<b>移動効率ではなく撮影品質の保証</b>が本当の課題だと分かり、経路計画のアーキテクチャそのものを作り直した。
+      AIエージェントは判断を代行させる相手ではなく、<b>自分では見えない死角を突く道具</b>として使う。
+    </p>
+  </div>
+
+  <div class="arg">
+
+    <div class="step">
+      <div class="step-num mono">01</div>
+      <div class="step-body">
+        <h2>前提を検証し、研究の軸を転換した</h2>
+        <p class="lede">
+          国内橋梁は建設後50年超が2033年に全体の約63%へ達する見込みで、道路法は5年に1度の近接目視点検を義務付けている。
+          点検員不足と高所・水上作業の危険性を背景に、UAVによる自動点検の経路計画（CPP）を研究している。
+          対象は明石大橋のトラス橋梁——部材が密に交差し合う、幾何的に最も難しい構造の一つ。
+        </p>
+        <p>
+          研究の出発点は「ビューポイント生成＋TSP巡回はNP困難で計算が爆発するから、訪問順序を工夫する」という前提だった。
+          だが実際に必要な視点数を測定すると I=68〜190（数十ではなく百程度）で、TSPソルバのベンチマークではこの規模は
+          1秒未満で解ける可能性が高いと判明した。<b>研究全体を駆動していた前提そのものが揺らいでいる</b>ことに、自分で気づいた。
+        </p>
+        <p>
+          そこから点検制度（道路橋定期点検要領・自治体の運用基準）まで遡ると、UAV点検の成否を分けているのは
+          移動の効率ではなく撮影画像の品質だと分かった。分解能保証と静止撮影によるモーションブラー回避を軸に据え直し、
+          連続移動しながら撮影する既存アーキテクチャから、静止して撮る視点生成方式へ、経路計画そのものを設計し直した。
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num mono">02</div>
+      <div class="step-body">
+        <h2>実装して、数字で検証した</h2>
+        <p class="lede">
+          提案手法をC++で実装し、ROS2 + Gazebo上で実際に自律飛行・被覆評価まで動かして検証している。理論だけで止めない。
+        </p>
+        <ul class="facts">
+          <li>
+            <span class="num mono">97.68%</span>
+            <span class="label">被覆率（和集合モデル）</span>
+            <span class="detail">橋梁を53本の独立した箱ではなく1つの立体として扱い直し、重なり内部の実在しない点を除去。指標の測定条件依存（旧: 3.0ポイント幅の揺れ）を解消した。</span>
+          </li>
+          <li>
+            <span class="num mono">2.32%</span>
+            <span class="label">未被覆点の要因分解</span>
+            <span class="detail">78.7%は部材間隔0〜1.0mで機体が物理的に入れない構造上の限界。残りは候補点の解像度不足で、格子を細分化すると98.21%まで改善することを実証済み。</span>
+          </li>
+          <li>
+            <span class="num mono">I = 68–190</span>
+            <span class="label">実測ビューポイント数</span>
+            <span class="detail">専門家の予想（数十）でも自分の直感（数百）でもなく、実測により「百程度」と決着させた。</span>
+          </li>
+          <li>
+            <span class="num mono">G(d,θ)≤s_req</span>
+            <span class="label">分解能保証式（実装済み）</span>
+            <span class="detail">既往研究のT型橋脚実験値（f=97.9mm）を用い、距離・入射角から実効GSDを計算する式をROS2ノードに実装・動作確認。</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num mono">03</div>
+      <div class="step-body">
+        <h2>AIエージェントを「使い分ける」</h2>
+        <p class="lede">
+          研究の方針決定でサブエージェントを使うとき、効く使い方と効かない使い方がはっきり分かれると気づいた。
+          判断基準は一つ——外部から情報が入るか、自分では見えない死角を突くか。同じモデルに討論させるだけでは、
+          もっともらしく見えても判断材料は増えない。
+        </p>
+        <div class="patterns">
+          <div>
+            <span class="k">① 反証タスク</span>
+            <p>擁護させず、成功/失敗が判定できる課題を渡す。「反証できなかった」という報告自体が情報になる。</p>
+          </div>
+          <div>
+            <span class="k">② 前提の掘り起こし</span>
+            <p>議論させず列挙させる。自分では見えない隠れた前提の網羅は、判断ではなく網羅なのでエージェント向き。</p>
+          </div>
+          <div>
+            <span class="k">③ 隣接分野からの輸入</span>
+            <p>経路計画の外（非破壊検査・計測工学・写真測量規格など）を探させ、新しい定式化を持ち込む。</p>
+          </div>
+          <div>
+            <span class="k">④ 制度・実務からの検証</span>
+            <p>難しさがアルゴリズムではなく、制度・運用側の要求から来ている可能性を潰す。</p>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="tag mono">実例 · 2026-08-20</span>
+          「品質保証は視点数を増やせば力ずくで達成できる」という行き詰まりに直面したとき、エージェントに議論させる前に
+          自分の実装を測った。視点85→227で被覆率は90.1%→98.2%に上がるのに、1枚あたりの達成分解能は0.456→0.458と
+          ほぼ不変——増分は全て被覆率に使われ、品質保証には効いていなかった。さらに掘ると、被覆判定が機体の実座標ではなく
+          計画上の視点座標で行われており、到達判定は0.4mのずれを許容していることが判明。
+          「品質保証」は理想的な位置決めを仮定した上のものだったと分かった。
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num mono">04</div>
+      <div class="step-body">
+        <h2>技術スタック</h2>
+        <p class="lede">アルゴリズム設計から実機を想定したシミュレーション実装まで、一人で通している。</p>
+        <div class="stack">
+          <span>C++17</span>
+          <span>ROS2 (rclcpp)</span>
+          <span>Gazebo</span>
+          <span>OBB衝突判定</span>
+          <span>レイキャスティング遮蔽判定</span>
+          <span>Greedy Set-Cover</span>
+          <span>SA-TSP</span>
+          <span>Voronoiクラスタリング</span>
+          <span>Python（集計・可視化）</span>
+          <span>Git / CMake</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      詳細な実装記録・実験ログ：<a href="#">GitHubリポジトリURLを追記</a><br>
+      連絡先：<a href="#">メールアドレスを追記</a><br>
+      関連資料：研究ストーリー / AI活用の型 / ROS2実装ノート（別途追加予定）
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
